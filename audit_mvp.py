@@ -37,6 +37,7 @@ def build_prompt(text, rubric):
         f"Use this rubric: {json.dumps(rubric)}\n"
         "Return STRICT JSON ONLY with keys: Brand, Content, Website, Marketing.\n"
         "Each key must contain: grade (A+ to F), reasoning (string), quick_wins (list of strings)."
+        "Provide detailed and actionable recommendations and examples for each section"
     )
 
 def analyze(text, rubric, model="gpt-4o-mini"):
