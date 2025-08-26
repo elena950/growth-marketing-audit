@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "Brand": {
+      "criteria": [
+        "Is the brand identity consistent across visuals and messaging?",
+        "Does the brand have a clear unique value proposition?"
+      ]
+    },
+    "Content": {
+      "criteria": [
+        "Is there clear, useful, and engaging content?",
+        "Is content tailored to the audience?"
+      ]
+    },
+    "Website": {
+      "criteria": [
+        "Is the website fast, mobile-friendly, and accessible?",
+        "Is the navigation intuitive and conversion-focused?"
+      ]
+    },
+    "Marketing": {
+      "criteria": [
+        "Is there evidence of SEO best practices?",
+        "Are social links or channels visible?",
+        "Is there a clear funnel or call to action?"
+      ]
+    }
+  },
+  "grading_scale": ["F", "D", "C", "B", "A", "A+"]
+}
