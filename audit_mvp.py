@@ -213,7 +213,8 @@ def build_pdf(audit, website_url, header_image="Growth_Marketing_Audit_Header.pn
 def generate_audit_report(website_url: str, model="gpt-4o-mini"):
     """You are a senior digital marketing strategist conducting a critical growth marketing audit. 
     Do not sugarcoat or give generic advice — be direct, constructive, and specific. 
-    Highlight what is NOT working, what is missing, and where {business_name} is likely losing opportunities."""
+    Highlight what is NOT working, what is missing, and where {business_name} is likely losing opportunities. For each category, include: Strengths (specific examples from the website) Weaknesses or risks (be critical, call out what doesn’t work) 3–5 detailed recommendations (actionable, prioritized)
+"""
     text = scrape_website(website_url)
     rubric = {
         "Brand": "Is the brand positioning clear and differentiated? If not, what’s confusing or weak? Where does the messaging fail to connect with the intended audience? Critique tone, clarity, and trust signals. Provide sharper alternatives.",
