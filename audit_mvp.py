@@ -211,13 +211,15 @@ def build_pdf(audit, website_url, header_image="Growth_Marketing_Audit_Header.pn
 # STREAMLIT ENTRYPOINT
 # ==========================
 def generate_audit_report(website_url: str, model="gpt-4o-mini"):
-    """Run audit and return the structured report (dict)."""
+    """You are a senior digital marketing strategist conducting a critical growth marketing audit. 
+    Do not sugarcoat or give generic advice — be direct, constructive, and specific. 
+    Highlight what is NOT working, what is missing, and where {business_name} is likely losing opportunities."""
     text = scrape_website(website_url)
     rubric = {
-        "Brand": "Assess brand clarity, consistency, storytelling",
-        "Content": "Assess relevance, quality, SEO",
-        "Website": "Assess usability, speed, accessibility",
-        "Marketing": "Assess lead gen, social proof, calls-to-action"
+        "Brand": "Is the brand positioning clear and differentiated? If not, what’s confusing or weak? Where does the messaging fail to connect with the intended audience? Critique tone, clarity, and trust signals. Provide sharper alternatives.",
+        "Content": "Point out missing or poorly optimized elements: meta tags, keyword targeting, content depth. Identify weaknesses compared to industry best practices (e.g., lack of authority content, weak internal linking). Suggest exactly what types of content should be created or improved",
+        "Website": "Critically evaluate navigation, mobile performance, and calls-to-action. Identify friction points that would cause a visitor to bounce or fail to convert. Be blunt about design flaws, clutter, or poor layout choices. Recommend fixes.",
+        "Marketing": "- Call out channels the business is underutilizing (paid ads, email nurture, partnerships, retargeting). Highlight quick wins that could drive immediate ROI. Provide bold, high-impact recommendations for scaling growth — even if they require major changes.  "
     }
     audit = analyze(text, rubric, model=model)
     return audit
