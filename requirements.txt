@@ -1,5 +1,5 @@
 streamlit
-fdpf2
+fpdf2
 openai
 beautifulsoup4
 requests
